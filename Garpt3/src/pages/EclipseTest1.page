@@ -1,0 +1,19 @@
+<apex:page controller="EclipseTest1">
+	<h1>New Page</h1>
+	<apex:form >
+		Your Name: <apex:inputText value="{!name}" /><BR/>
+		<apex:outputText value="{!message}" /><BR/>
+		<apex:commandButton action="{!hello}" value="Say Hi" /><BR/>
+	</apex:form>
+	
+	Select a Survey:<BR/>
+	
+	<apex:form >
+		<apex:repeat value="{!survey}" var="string" id="theRepeat">
+	
+			<apex:commandLink action="{!save}" value="{!survey.Name}" id="theCommandLink"/>			
+	
+	    </apex:repeat>
+	    
+	</apex:form>
+</apex:page>
